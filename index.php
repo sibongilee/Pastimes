@@ -25,6 +25,7 @@
         <a href="clothes.php">
             <button class="shop-btn">Shop Now →</button>
         </a>
+        
     </div>
     <div class="hero-cards">
         <div class="card light">Jackets</div>
@@ -34,6 +35,16 @@
 
     </div>
 </div>
+        <div class="navbar"
+            <strong>Pastimes</strong>
+            <div>
+                <a href="index.php">Home</a>
+                <a href="clothes.php">Shop</a>
+                <a href="login.php">Login</a>
+                <a href="regisster.php">Register</a>
+            </div>
+        </div>
+    
 </body>
 
 </html>
