@@ -1,7 +1,4 @@
 <?php
-// Sibongile Nhlapo - ST10449136
-// Tshifhiwa Austin Thamagane - ST10441732
-// Website: Pastimes
 // This page allows a new user to register.
 
 include "DBConn.php";
