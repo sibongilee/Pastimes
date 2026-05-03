@@ -1,0 +1,204 @@
+/* =========================
+   Pastimes Full Styling
+   Sibongile Nhlapo & Tshifhiwa
+   ========================= */
+
+/* GENERAL */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f1eb;
+    margin: 0;
+    color: #1f1712;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #1f1712;
+    padding: 15px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar strong {
+    color: white;
+    font-size: 20px;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HOME (HERO SECTION) */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 9%;
+}
+
+.hero-text {
+    max-width: 40%;
+}
+
+.hero-text h1 {
+    font-size: 70px;
+    line-height: 0.95;
+    margin: 15px 0;
+}
+
+.small-text {
+    color: #a68c6d;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+/* BUTTONS */
+.shop-btn,
+button {
+    background-color: #1f1712;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+/* CATEGORY CARDS (HOME) */
+.hero-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 220px);
+    gap: 25px;
+}
+
+.card {
+    height: 220px;
+    border-radius: 18px;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card.light {
+    background-color: #c9a46b;
+}
+
+.card.dark {
+    background: linear-gradient(to right, #1f1712, #3b2a1e);
+    color: white;
+}
+
+/* FORMS (LOGIN + REGISTER) */
+.container {
+    text-align: center;
+}
+
+.form-box {
+    background: white;
+    padding: 25px;
+    margin: 30px auto;
+    width: 380px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+.form-box input {
+    width: 95%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* MESSAGES */
+.message {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+/* CLOTHES PAGE */
+.shop-heading {
+    margin-left: 9%;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.product-grid {
+    width: 82%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.product h3 {
+    margin-bottom: 5px;
+}
+
+.product p {
+    color: #5b4636;
+    margin: 5px 0;
+}
+
+/* CART */
+.cart-item {
+    background: white;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+/* ADMIN TABLE */
+table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #1f1712;
+    color: white;
+}
+
+/* HOVER EFFECTS */
+button:hover {
+    background-color: #3b2a1e;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
