@@ -1,6 +1,4 @@
 <?php
-// Sibongile Nhlapo - ST10449136
-// Tshifhiwa Austin Thamagane - ST10441732
 // Website: Pastimes
 // This page stores and displays selected clothing items using sessions.
 

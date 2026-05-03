@@ -14,6 +14,7 @@
         <a href="login.php">Login</a>
         <a href="register.php">Register</a>
     </div>
+</div>
 
 <div class="hero">
 
@@ -34,18 +35,7 @@
         <div class="card light">Tees</div>
 
     </div>
-</div>
-        <div class="navbar"
-            <strong>Pastimes</strong>
-            <div>
-                <a href="index.php">Home</a>
-                <a href="clothes.php">Shop</a>
-                <a href="login.php">Login</a>
-                <a href="regisster.php">Register</a>
-            </div>
-        </div>
-    
 </body>
 
 </html>
-</div>
+

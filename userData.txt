@@ -1,0 +1,4 @@
+John Doe,john@gmail.com,john123,12345678,Johannesburg
+Jane Smith,jane@gmail.com,jane123,12345678,Pretoria
+Sibongile Nhlapo,sibongile@gmail.com,sibongile,12345678,Soweto
+Tshifhiwa Thamagane,tshifhiwa@gmail.com,tshifhiwa,12345678,Polokwane
