@@ -1,36 +1,66 @@
 <?php
-// back-end code to display clothing items on the Pastimes online clothing store homepage. It retrieves data from the database
+
+// Displays clothing grouped into Men and Women.
 
 include "DBConn.php";
 
-// SQL query to fetch all clothing items
-$result = mysqli_query($conn, "SELECT * FROM tblClothes");
+$men = mysqli_query($conn, "SELECT * FROM tblClothes WHERE category='Men'");
+$women = mysqli_query($conn, "SELECT * FROM tblClothes WHERE category='Women'");
 ?>
 
-<link rel="stylesheet" href="css/style.css">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop - Pastimes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-<h1>Pastimes Clothing Store</h1>
+<div class="navbar">
+    <strong>Pastimes</strong>
+    <div>
+        <a href="index.php">Home</a>
+        <a href="clothes.php">Shop</a>
+        <a href="login.php">Login</a>
+        <a href="register.php">Register</a>
+        <a href="admin.php">Admin</a>
+        <a href="cart.php">Cart</a>
+    </div>
+</div>
 
-<div class="container">
-
-<?php while ($row = mysqli_fetch_assoc($result)) { ?>
-
+<!-- MEN -->
+<h1 class="shop-heading">Men Collection</h1>
+<div class="product-grid">
+<?php while ($row = mysqli_fetch_assoc($men)) { ?>
     <div class="product">
-        <!-- Display image stored in images folder -->
-        <img src="images/<?php echo $row['image']; ?>">
+        <img src="images/<?php echo $row['image']; ?>" alt="Clothing Image">
+        <h3><?php echo $row["item_name"]; ?></h3>
+        <p>Category: <?php echo $row["category"]; ?></p>
+        <p><strong><?php echo $row["price"]; ?></strong></p>
 
-        <!-- Display clothing name -->
-        <h3><?php echo $row['item_name']; ?></h3>
-
-        <!-- Display price -->
-        <p>Price: R<?php echo $row['price']; ?></p>
-
-        <!-- Add to cart button -->
         <a href="cart.php?add=<?php echo $row['clothes_id']; ?>">
             <button>Add To Cart</button>
         </a>
     </div>
-
 <?php } ?>
-
 </div>
+
+<!-- WOMEN -->
+<h1 class="shop-heading">Women Collection</h1>
+<div class="product-grid">
+<?php while ($row = mysqli_fetch_assoc($women)) { ?>
+    <div class="product">
+        <img src="images/<?php echo $row['image']; ?>" alt="Clothing Image">
+        <h3><?php echo $row["item_name"]; ?></h3>
+        <p>Category:<?php echo $row["category"]; ?></p>
+        <p><strong><?php echo $row["price"]; ?></strong></p>
+
+        <a href="cart.php?add=<?php echo $row['clothes_id']; ?>">
+            <button>Add To Cart</button>
+        </a>
+    </div>
+<?php } ?>
+</div>
+
+</body>
+</html>

@@ -64,11 +64,16 @@ while (($line = fgets($file)) !== false) {
 fclose($file);
 
 // Inserting clothing items with images and prices
+// Insert clothing items (Men & Women categories)
 mysqli_query($conn, "INSERT INTO tblClothes (item_name, category, price, image)
 VALUES
-('Denim Jacket','Jackets',899.00,'jacket.jpg'),
-('Sweater','Knitwear',649.00,'sweater.jpg'),
-('T-Shirt','T-Shirts',349.00,'tee.jpg')");
+('Denim Jacket','Men',899.00,'jacket.jpg'),
+('Hoodie','Men',349.00,'hoodie.jpg'),
+('Jeans','Men',599.00,'jeans.jpg'),
+
+('Dress','Women',499.00,'dress.jpg'),
+('Sweater','Women',649.00,'sweater.jpg'),
+('Top','Women',399.00,'top.jpg')");
 
 // Final confirmation message
 echo "Tables created successfully!";
