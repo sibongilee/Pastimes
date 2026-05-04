@@ -7,7 +7,7 @@ An admin is responsible for approving users before they can access the system.
 
 ---
 
-## Group Members
+## Authors
 - Sibongile Nhlapo – ST10449136  
 - Tshifhiwa Austin Thamagane – ST10441732  
 
