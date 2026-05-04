@@ -67,7 +67,7 @@ fclose($file);
 mysqli_query($conn, "INSERT INTO tblClothes (item_name, category, price, image)
 VALUES
 ('Denim Jacket','Men',899.00,'jacket.jpg'),
-('T-Shirt','Men',349.00,'tee.jpg'),
+('Hoodie','Men',349.00,'hoodie.jpg'),
 ('Jeans','Men',599.00,'jeans.jpg'),
 ('Dress','Women',499.00,'dress.jpg'),
 ('Sweater','Women',649.00,'sweater.jpg'),
