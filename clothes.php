@@ -25,9 +25,14 @@ $women = mysqli_query($conn, "SELECT * FROM tblClothes WHERE category='Women'");
         <a href="register.php">Register</a>
         <a href="admin.php">Admin</a>
         <a href="cart.php">Cart</a>
+        
     </div>
 </div>
-
+<form method="get">
+    <input type="text" name="search" placeholder="Search for clothing items...">
+    <button type="submit">Search</button>
+</form>
+   
 <!-- MEN -->
 <h1 class="shop-heading">Men Collection</h1>
 <div class="product-grid">
@@ -40,6 +45,9 @@ $women = mysqli_query($conn, "SELECT * FROM tblClothes WHERE category='Women'");
 
         <a href="cart.php?add=<?php echo $row['clothes_id']; ?>">
             <button>Add To Cart</button>
+        </a>
+        <a href="wishlist.php?add=<?php echo $row['clothes_id']; ?>">
+            <button>Add to Wishlist</button>
         </a>
     </div>
 <?php } ?>
@@ -58,9 +66,13 @@ $women = mysqli_query($conn, "SELECT * FROM tblClothes WHERE category='Women'");
         <a href="cart.php?add=<?php echo $row['clothes_id']; ?>">
             <button>Add To Cart</button>
         </a>
+        <a href="wishlist.php?add=<?php echo $row['clothes_id']; ?>">
+            <button>Add to Wishlist</button>
+        </a>
     </div>
 <?php } ?>
 </div>
+
 
 </body>
 </html>

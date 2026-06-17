@@ -11,14 +11,33 @@ if (!isset($_SESSION["cart"])) {
 }
 
 // Add item to cart
-if (isset($_GET["add"])) {
-    $_SESSION["cart"][] = $_GET["add"];
-}
+if(isset($_GET["add"])){
+    $id = (int)$_GET["add"];
+    if(isset($_SESSION["cart"][$id])){
+        $_SESSION["cart"][$id]++;
+    } else {
+        $_SESSION["cart"][$id] = 1;
 
-// Remove item
-if (isset($_GET["remove"])) {
-    $removeId = $_GET["remove"];
-    $_SESSION["cart"] = array_diff($_SESSION["cart"], array($removeId));
+    }
+}
+// increase item quantity
+if(isset($_GET["increase"])){
+    $id = (int)$_GET["increase"];
+    $_SESSION["cart"][$id]++;
+}
+// decrease item quantity
+if(isset($_GET["decrease"])){
+    $id = (int)$_GET["decrease"];
+    if($_SESSION["cart"][$id] > 1){
+        $_SESSION["cart"][$id]--;
+    } else {
+        unset($_SESSION["cart"][$id]);
+    }
+}
+// Remove item from cart
+if(isset($_GET["remove"])){
+    $id = (int)$_GET["remove"];
+    unset($_SESSION["cart"][$id]);
 }
 ?>
 
@@ -51,38 +70,57 @@ $total = 0;
 if (empty($_SESSION["cart"])) {
     echo "<p class='shop-heading'>Your cart is empty.</p>";
 }
+// Display items in cart
+foreach ($_SESSION["cart"] as $id => $quantity) {
 
-// Loop through cart items
-foreach ($_SESSION["cart"] as $id) {
-    $result = mysqli_query($conn, "SELECT * FROM tblClothes WHERE clothes_id=$id");
+    $result = mysqli_query($conn, "SELECT * FROM tblClothes WHERE clothes_id=" . (int)$id);
     $item = mysqli_fetch_assoc($result);
 
     if ($item) {
-        $total += $item["price"];
+
+        $subtotal = $item["price"] * $quantity;
+        $total += $subtotal;
 ?>
 
-        <div class="product">
-            <img src="images/<?php echo $item['image']; ?>">
+    <div class="product">
+        <img src="images/<?php echo $item['image']; ?>">
 
-            <h3><?php echo $item["item_name"]; ?></h3>
-            <p><strong>R<?php echo $item["price"]; ?></strong></p>
+        <h3><?php echo $item["item_name"]; ?></h3>
+        <p><strong>R<?php echo $item["price"]; ?></strong></p>
 
-            <a href="cart.php?remove=<?php echo $item['clothes_id']; ?>">
-                <button>Remove</button>
-            </a>
-        </div>
+        <p>Quantity: <?php echo $quantity; ?></p>
+        <p>Subtotal: R<?php echo $subtotal; ?></p>
 
+        <!-- Quantity Buttons -->
+        <a href="cart.php?increase=<?php echo $id; ?>">
+            <button>+</button>
+        </a>
+
+        <a href="cart.php?decrease=<?php echo $id; ?>">
+            <button>-</button>
+        </a>
+
+        <!-- Remove Button -->
+        <a href="cart.php?remove=<?php echo $id; ?>">
+            <button>Remove</button>
+        </a>
+      
+
+</div>
 <?php
     }
 }
 ?>
-
 </div>
-
 <h2 style="text-align:center;">Total: R<?php echo $total; ?></h2>
 <div style="text-align:center; margin-bottom:50px;">
     <a href="clothes.php">
         <button>Continue Shopping</button>
+    </a>
+</div>
+<div style="text-align:center; margin-bottom:50px;">
+    <a href="checkout.php">
+        <button>Proceed to Checkout</button>
     </a>
 </div>
 
