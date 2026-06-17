@@ -14,24 +14,30 @@ body {
 /* NAVBAR */
 .navbar {
     background-color: #1f1712;
-    padding: 15px 9%;
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-.navbar strong {
+.logo strong{
     color: white;
-    font-size: 20px;
+    font-size: 28px;
 }
 
-.navbar a {
+.nav-links {
+    display: flex;
+   gap: 20px;
+}
+
+.nav-links a {
     color: white;
-    margin-left: 20px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 14px;
 }
-
+.nav-links a:hover {
+    color: #c9a46b;
+}
 /* HOME (HERO SECTION) */
 .hero {
     display: flex;
@@ -70,18 +76,18 @@ button {
 /* CATEGORY CARDS (HOME) */
 .hero-cards {
     display: grid;
-    grid-template-columns: repeat(2, 220px);
-    gap: 25px;
+    grid-template-columns: repeat(2, 200px);
+    gap: 20px;
 }
 
 .card {
-    height: 220px;
-    border-radius: 18px;
+    height: 200px;
+    border-radius: 15px;
     display: flex;
     align-items: flex-end;
-    padding: 20px;
+    padding: 15px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .card.light {
@@ -89,10 +95,9 @@ button {
 }
 
 .card.dark {
-    background: linear-gradient(to right, #1f1712, #3b2a1e);
+    background-color: #3b2a1e;
     color: white;
 }
-
 /* FORMS (LOGIN + REGISTER) */
 .container {
     text-align: center;
@@ -130,18 +135,17 @@ button {
 }
 
 .product-grid {
-    width: 82%;
-    margin: 30px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    width: 85%;
+    margin: auto;
+    gap: 20px;
 }
 
 .product {
     background: white;
-    border-radius: 18px;
     padding: 15px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+    border-radius: 12px;
     text-align: center;
 }
 

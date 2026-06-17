@@ -3,6 +3,7 @@
 // This page allows users to request to become sellers by submitting a form.
 session_start();
 include "DBConn.php";
+
 if(isset($_POST["submit"])){
     $brand = $_POST["brand"];
     $description = $_POST["description"];
@@ -25,6 +26,7 @@ if(isset($_POST["submit"])){
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    
 
 <h2>Sell Clothes</h2>
 
