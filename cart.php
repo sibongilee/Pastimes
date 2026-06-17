@@ -54,8 +54,8 @@ if(isset($_GET["remove"])){
     <div>
         <a href="index.php">Home</a>
         <a href="clothes.php">Shop</a>
-        <a href="login.php">Login</a>
         <a href="admin.php">Admin</a>
+        <a href="wishlist.php">Wishlist</a>
         <a href="logout.php">Logout</a>
     </div>
 </div>

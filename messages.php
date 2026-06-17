@@ -21,6 +21,22 @@ if(isset($_GET['reject']))
      WHERE request_id='$id'");
 }
 ?>
+<!-- navigation links -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin - Pastimes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <strong>Pastimes</strong>
+    <a href="index.php">Home</a>
+    <a href="admin.php">Admin</a>
+    <a href="wishlist.php">Wishlist</a>
+    <a href="logout.php">Logout</a>
+</div>
 
 <h2>Seller Requests</h2>
 

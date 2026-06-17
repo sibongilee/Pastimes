@@ -52,8 +52,9 @@ if (isset($_POST["login"])) {
     <strong>Pastimes</strong>
     <a href="index.php">Home</a>
     <a href="register.php">Register</a>
-    <a href="login.php">Login</a>
     <a href="admin.php">Admin</a>
+    <a href="seller_request.php">Sell Clothes</a>
+    <a href="wishlist.php">Wishlist</a>
     <a href="clothes.php">Clothes</a>
 </div>
 

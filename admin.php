@@ -50,9 +50,11 @@ $users = mysqli_query($conn, "SELECT * FROM tblUser");
 <div class="navbar">
     <strong>Pastimes</strong>
     <a href="index.php">Home</a>
-    <a href="register.php">Register</a>
-    <a href="login.php">Login</a>
-    <a href="clothes.php">Clothes</a>
+    <a href="seller_request.php">Sell Clothes</a>
+    <a href="admin.php">Admin</a>
+    <a href="admin_clothes.php">Admin Clothes</a>
+    <a href="admin_users.php">Admin Users</a>
+    <a href="messages.php">Messages</a>
     <a href="logout.php">Logout</a>
 </div>
 
