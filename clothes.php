@@ -73,6 +73,6 @@ $women = mysqli_query($conn, "SELECT * FROM tblClothes WHERE category='Women'");
 <?php } ?>
 </div>
 
-
+<?php include("footer.php"); ?>
 </body>
 </html>

@@ -23,6 +23,7 @@ unset($_SESSION['cart']);
     </a>
 
 </div>
+<?php include("footer.php"); ?>
 
 </body>
 </html>

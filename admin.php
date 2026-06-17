@@ -110,6 +110,7 @@ $users = mysqli_query($conn, "SELECT * FROM tblUser");
 </div>
 
 <?php } ?>
+<?php include("footer.php"); ?>
 
 </body>
 </html>

@@ -27,7 +27,9 @@
         <div class="card light">Tees</div>
 
     </div>
+</div>
+<?php include("footer.php"); ?>
 </body>
-
 </html>
+
 

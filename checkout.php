@@ -19,7 +19,7 @@ $products = [
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Checkout</title>
+    <title>Checkout - Pastimes</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>

@@ -69,4 +69,5 @@ while($row = mysqli_fetch_assoc($result))
         Delete
     </a>
 </div>
+<?php include("footer.php"); ?>
 <?php } ?>

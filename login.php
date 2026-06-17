@@ -72,6 +72,6 @@ if (isset($_POST["login"])) {
         </form>
     </div>
 </div>
-
+<?php include("footer.php"); ?>
 </body>
 </html>

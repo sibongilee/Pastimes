@@ -51,4 +51,5 @@ while($row = mysqli_fetch_assoc($result))
     <a href="?approve=<?php echo $row['user_id']; ?>">Approve</a>
     <a href="?delete=<?php echo $row['user_id']; ?>">Delete</a>
 </div>
+<?php include("footer.php"); ?>
 <?php } ?>

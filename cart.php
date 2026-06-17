@@ -123,6 +123,6 @@ foreach ($_SESSION["cart"] as $id => $quantity) {
         <button>Proceed to Checkout</button>
     </a>
 </div>
-
+<?php include("footer.php"); ?>
 </body>
 </html>

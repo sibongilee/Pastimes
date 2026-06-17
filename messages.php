@@ -56,5 +56,6 @@ while($row = mysqli_fetch_assoc($result))
     <a href="?approve=<?php echo $row['request_id']; ?>">Approve</a>
     <a href="?reject=<?php echo $row['request_id']; ?>">Reject</a>
 </div>
+<?php include("footer.php"); ?>
 <?php 
 } ?>
