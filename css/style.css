@@ -307,3 +307,29 @@ button:hover {
     margin-top: 15px;
     font-size: 14px;
 }
+.history-container{
+    width:90%;
+    margin:auto;
+    padding:40px;
+}
+
+.history-container h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.history-container table{
+    background:white;
+    border-collapse:collapse;
+}
+
+.history-container th{
+    background:#1f1712;
+    color:white;
+}
+
+.history-container td,
+.history-container th{
+    padding:12px;
+    text-align:center;
+}

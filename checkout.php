@@ -47,7 +47,14 @@ $products = [
 
         echo "</div>";
     }
+    // Checkout reference Number
+    $orderNum = rand(100000, 999999);
+    echo "Reference Number: $orderNum";
+    echo"<br>";
+    echo "Session ID: " . session_id();
     ?>
+    
+
 
     <div class="checkout-total">
         <h2>Total: R<?php echo $total; ?></h2>

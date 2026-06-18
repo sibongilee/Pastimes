@@ -23,8 +23,12 @@ $women = mysqli_query($conn, "SELECT * FROM tblClothes WHERE category='Women'");
         <a href="clothes.php">Shop</a>
         <a href="login.php">Login</a>
         <a href="register.php">Register</a>
+        <a href="seller_request.php">Seller Request</a>
         <a href="admin.php">Admin</a>
         <a href="cart.php">Cart</a>
+        <a href="purchaseHistory.php">purchaseHistory
+            
+        </a>
         
     </div>
 </div>

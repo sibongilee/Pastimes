@@ -41,7 +41,7 @@ if(isset($_GET['reject']))
 <h2>Seller Requests</h2>
 
 <?php
-$result = mysqli_query($conn,"SELECT * FROM tblSellerRequest");
+$result = mysqli_query($conn,"SELECT * FROM tblMessages");
 
 while($row = mysqli_fetch_assoc($result))
 {
