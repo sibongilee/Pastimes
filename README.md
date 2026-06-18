@@ -1,17 +1,17 @@
-### Pastimes Clothing Store
+# Pastimes Clothing Store
 
-## Overview
+### Overview
 Pastimes Clothing Store is a web-based second-hand clothing marketplace developed using HTML, CSS, PHP, and MySQL. The application allows customers to browse clothing items, register accounts, log in, add products to a shopping cart, and complete purchases through a checkout system.
 
 The website also includes administrative functionality that allows administrators to manage users and clothing products. Sellers can submit clothing items for approval before they are made available to customers.
 
-## Target Users
+### Target Users
 The application is designed for:
 * Customers looking to purchase affordable second-hand clothing.
 * Sellers who wish to sell pre-owned clothing items.
 * Administrators responsible for managing products, users, and transactions.
 
-## Technologies Used
+### Technologies Used
 * HTML5
 * CSS3
 * PHP
@@ -20,7 +20,7 @@ The application is designed for:
 * GitHub
 * GitHub Actions
 
-## Design Decisions
+### Design Decisions
 Several design decisions were made during the development of the website:
 * A neutral colour scheme consisting of black, beige, and white was selected to create a modern clothing-store appearance.
 * Navigation was placed at the top of the website to improve usability.
@@ -28,7 +28,7 @@ Several design decisions were made during the development of the website:
 * Database tables were used to store user accounts, clothing items, orders, and seller requests.
 * Responsive layouts and simple navigation were implemented to improve user experience.
 
-## Features
+### Features
 Customer Features
 * User Registration
 * User Login
@@ -40,7 +40,7 @@ Customer Features
 * Checkout Functionality
 * Purchase History
 
-## Administrator Features
+### Administrator Features
 * Administrator Login
 * Add Clothing Items
 * Edit Clothing Items
@@ -48,12 +48,12 @@ Customer Features
 * Manage User Accounts
 * View Orders
 
-## Seller Features
+### Seller Features
 * Submit Clothing Item Requests
 * Upload Clothing Information
 * Submit Brand and Description Details
 
-## Custom Features
+### Custom Features
 
 Feature 1: Purchase History
 Customers can view a history of their previous purchases. The report displays all orders and calculates the total amount spent.
@@ -61,7 +61,7 @@ Customers can view a history of their previous purchases. The report displays al
 Feature 2: Seller Clothing Requests
 Sellers can submit requests to sell clothing items by providing item details, descriptions, and images. Administrators can review these requests before approval.
 
-## Database Structure
+### Database Structure
 The application uses the following tables:
 
 * tblUser
@@ -76,7 +76,7 @@ GitHub was used for version control and collaboration between group members. All
 
 GitHub Actions was used to automate repository workflows and support continuous integration practices. This helped maintain version control throughout the development process.
 
-## Installation Instructions
+### Installation Instructions
 1. Install XAMPP or WAMP.
 2. Import the myClothingStore.sql database into phpMyAdmin.
 3. Place the project folder inside the htdocs or www directory.
@@ -85,7 +85,7 @@ GitHub Actions was used to automate repository workflows and support continuous 
 
 http://localhost/Pastimes
 
-## Group Members
+# Group Members
 
 * Sibongile Kubheka
 * Tshifhiwa
