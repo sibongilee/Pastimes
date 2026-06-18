@@ -5,6 +5,10 @@ Pastimes Clothing Store is a web-based second-hand clothing marketplace develope
 
 The website also includes administrative functionality that allows administrators to manage users and clothing products. Sellers can submit clothing items for approval before they are made available to customers.
 
+## Authors
+Sibongile Nhlapo – ST10449136
+Tshifhiwa Austin Thamagane – ST10441732
+
 ### Target Users
 The application is designed for:
 * Customers looking to purchase affordable second-hand clothing.
@@ -19,6 +23,7 @@ The application is designed for:
 * XAMPP/WAMP
 * GitHub
 * GitHub Actions
+* Visual Studio Code
 
 ### Design Decisions
 Several design decisions were made during the development of the website:
@@ -28,7 +33,7 @@ Several design decisions were made during the development of the website:
 * Database tables were used to store user accounts, clothing items, orders, and seller requests.
 * Responsive layouts and simple navigation were implemented to improve user experience.
 
-### Features
+### System Features
 Customer Features
 * User Registration
 * User Login
@@ -70,8 +75,16 @@ The application uses the following tables:
 * tblOrder
 * tblOrderLine
 * tblSellerRequest
-
-## GitHub and GitHub Actions
+The database can be recreated using:
+* `myClothingStore.sql`
+* `loadClothingStore.php`
+  
+### Additional Files
+* `userData.txt` – contains preloaded users
+* `myClothingStore.sql` – exported database
+* `loadClothingStore.php` – recreates database
+  
+### GitHub and GitHub Actions
 GitHub was used for version control and collaboration between group members. All project files were stored within a shared repository.
 
 GitHub Actions was used to automate repository workflows and support continuous integration practices. This helped maintain version control throughout the development process.
@@ -82,13 +95,20 @@ GitHub Actions was used to automate repository workflows and support continuous 
 3. Place the project folder inside the htdocs or www directory.
 4. Start Apache and MySQL services.
 5. Open the browser and navigate to:
+6. Run the following to load the database:
+`http://localhost/Pastimes/loadClothingStore.php`
+7. Open the application in your browser:
+`http://localhost/Pastimes/index.php`
 
-http://localhost/Pastimes
 
-# Group Members
+## Login Details
+### Admin
+* Email: admin@pastimes.com
+* Password: admin12345
+## Users
+* Username: john123
+* Password: 12345678
 
-* Sibongile Kubheka
-* Tshifhiwa
 
 ## Conclusion
 
