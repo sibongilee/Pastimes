@@ -39,6 +39,9 @@ mysqli_query($conn, "CREATE TABLE tblClothes (
 // Creating tblOrder table to manage purchases made by users
 mysqli_query($conn, "CREATE TABLE tblOrder (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
+    address VARCHAR(100),
+    phone VARCHAR(20),
+    order_date DATETIME DEFAULT CURRENT_TIMESTAMP
     user_id INT,
     clothes_id INT,
     total_price DECIMAL(10,2)
@@ -77,4 +80,3 @@ VALUES
 
 // Final confirmation message
 echo "Tables created successfully!";
-?>

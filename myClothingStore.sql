@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 03, 2026 at 11:03 PM
+-- Generation Time: Jun 18, 2026 at 01:04 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -64,12 +64,26 @@ CREATE TABLE IF NOT EXISTS `tblclothes` (
 --
 
 INSERT INTO `tblclothes` (`clothes_id`, `item_name`, `category`, `price`, `image`) VALUES
-(1, 'Denim Jacket', 'Men', '899.00', 'jacket.jpg'),
 (2, 'Hoodie', 'Men', '349.00', 'hoodie.jpg'),
 (3, 'Jeans', 'Men', '599.00', 'jeans.jpg'),
 (4, 'Dress', 'Women', '499.00', 'dress.jpg'),
 (5, 'Sweater', 'Women', '649.00', 'sweater.jpg'),
 (6, 'Top', 'Women', '399.00', 'top.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblmessages`
+--
+
+DROP TABLE IF EXISTS `tblmessages`;
+CREATE TABLE IF NOT EXISTS `tblmessages` (
+  `message_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(100) DEFAULT NULL,
+  `message` text DEFAULT NULL,
+  `date_sent` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`message_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -84,6 +98,39 @@ CREATE TABLE IF NOT EXISTS `tblorder` (
   `clothes_id` int(11) DEFAULT NULL,
   `total_price` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`order_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblorderline`
+--
+
+DROP TABLE IF EXISTS `tblorderline`;
+CREATE TABLE IF NOT EXISTS `tblorderline` (
+  `line_id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) DEFAULT NULL,
+  `clothes_id` int(11) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
+  PRIMARY KEY (`line_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblsellerrequest`
+--
+
+DROP TABLE IF EXISTS `tblsellerrequest`;
+CREATE TABLE IF NOT EXISTS `tblsellerrequest` (
+  `request_id` int(11) NOT NULL AUTO_INCREMENT,
+  `brand` varchar(100) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
+  `image` varchar(225) DEFAULT NULL,
+  `STATUS` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`request_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
